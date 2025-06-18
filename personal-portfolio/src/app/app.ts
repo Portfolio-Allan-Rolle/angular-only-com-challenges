@@ -6,8 +6,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
   selector: 'app-root',
   imports: [RouterOutlet, MatSlideToggleModule],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
-  protected title = 'personal-portfolio';
+  protected title = 'Portfolio Personnel';
 }
