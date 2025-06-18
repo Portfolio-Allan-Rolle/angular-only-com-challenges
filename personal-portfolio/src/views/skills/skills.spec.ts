@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Skills } from './skills';
+import { default as Skills } from './skills';
 
 describe('Skills', () => {
   let component: Skills;
@@ -8,16 +8,15 @@ describe('Skills', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Skills]
-    })
-    .compileComponents();
+      imports: [Skills],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(Skills);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create component', () => {
     expect(component).toBeTruthy();
   });
 });

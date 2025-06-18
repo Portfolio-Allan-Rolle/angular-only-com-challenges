@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Projects } from './projects';
+import { default as Projects } from './projects';
 
 describe('Projects', () => {
   let component: Projects;
@@ -8,16 +8,15 @@ describe('Projects', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Projects]
-    })
-    .compileComponents();
+      imports: [Projects],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(Projects);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create component', () => {
     expect(component).toBeTruthy();
   });
 });
