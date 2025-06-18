@@ -1,3 +1,38 @@
-
+<div class="container-fluid">
+  <div class="jumbotron text-center">
+    <h1 class="display-4">Hello, world!</h1>
+    <p class="lead py-4">
+      Welcome to my portfolio. <br />
+      This is the one and unique stop to find all the information you need about
+      me. Enjoy !
+    </p>
+    <div class="container">
+      <nav class="nav nav-pills flex-column flex-sm-row">
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          class="flex-sm-fill text-sm-center nav-link"
+          href="#"
+          >About me</a
+        >
+        <a
+          routerLink="/experiences"
+          routerLinkActive="active"
+          class="flex-sm-fill text-sm-center nav-link"
+          href="#"
+          >Experiences</a
+        >
+        <a
+          routerLink="/projects"
+          routerLinkActive="active"
+          class="flex-sm-fill text-sm-center nav-link"
+          href="#"
+          >Projets</a
+        >
+      </nav>
+    </div>
+    <hr class="my-4" />
+  </div>
+</div>
 
 <router-outlet />
