@@ -9,7 +9,6 @@ Utilisez le HttpClientModule pour récupérer les données d'une API météo pub
 
 - Création de composants
 - Utilisation du client HTTP pour effectuer des requêtes HTTP
-- Tests unitaires du client HTTP
 
 ## Development server
 
