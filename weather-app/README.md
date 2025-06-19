@@ -2,7 +2,8 @@
 
 ## Description
 
-Créez une application météo qui affiche les prévisions actuelles et sur 5 jours. Utilisez le HttpClientModule pour récupérer les données d'une API météo publique.
+Créez une application météo qui affiche les prévisions actuelles et sur 5 jours.  
+Utilisez le HttpClientModule pour récupérer les données d'une API météo publique.
 
 ## Compétences acquises
 
