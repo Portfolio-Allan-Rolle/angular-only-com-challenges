@@ -1,5 +1,7 @@
 <div class="card text-center bg-light my-4">
-  <p>19 Juin</p>
-  <p>Temp min: 19</p>
-  <p>Temp max: 31</p>
+  @for (item of dataFromApi(); track $index) {
+    <p>{{ item["datetime"] | dateFormatter }}</p>
+    <p>Temp min: {{ item["tempmin"] }}</p>
+    <p>Temp max: {{ item["tempmax"] }}</p>
+  }
 </div>

@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { DateFormatterPipe } from '../../pipes/date-formatter-pipe';
 
 @Component({
   selector: 'app-weather-card',
-  imports: [],
+  imports: [DateFormatterPipe],
   templateUrl: './weather-card.html',
-  styleUrl: './weather-card.scss'
+  styleUrl: './weather-card.scss',
 })
 export class WeatherCard {
-
+  dataFromApi = input.required<any[]>();
 }
