@@ -7,11 +7,9 @@ Développez une application de liste de tâches permettant d'ajouter, supprimer 
 ## Compétences acquises
 
 - Création de composants
-- Création d'une navigation / routage
 - Création d'un service pour centraliser les besoins métiers
   - ex: ajouter, supprimer, marquer comme terminé
 - Utilisation du localStorage
-- Tests unitaires du routage avec RouterTestingHarness
 
 ## Development server
 

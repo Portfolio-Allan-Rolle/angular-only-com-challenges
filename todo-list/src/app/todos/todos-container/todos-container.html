@@ -1,0 +1,9 @@
+<div class="container-fluid">
+  <div class="container py-3">
+    @if (todos().length != 0) {
+      @for (todo of todos(); track todo.id) {
+        <app-todo [todo]="todo"></app-todo>
+      }
+    }
+  </div>
+</div>
