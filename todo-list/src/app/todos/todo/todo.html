@@ -9,9 +9,8 @@
   />
   <label
     [class.text-decoration-line-through]="todo().completed"
-    class="text-decoration-line-through form-check-label ms-2"
+    class="form-check-label ms-2"
     [for]="todo().id"
-    (click)="onToggleComplete(todo().id)"
   >
     {{ todo().body }}</label
   >

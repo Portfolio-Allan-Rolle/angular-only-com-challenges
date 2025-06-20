@@ -5,7 +5,7 @@ import { ITodo } from '../models/models';
   providedIn: 'root',
 })
 export class TodoService {
-  private readonly stateKey = 'todos';
+  public readonly stateKey = 'todos';
   public list = signal<ITodo[]>([]);
 
   addTodo(todoBody: string) {
