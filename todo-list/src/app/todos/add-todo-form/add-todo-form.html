@@ -1,0 +1,15 @@
+<section class="container-fluid">
+  <div class="container">
+    <form (submit)="onSubmit($event)">
+      <input
+        #input
+        type="text"
+        class="form-control"
+        placeholder="add a todo..."
+        [(ngModel)]="todoBody"
+        [ngModelOptions]="{standalone: true}"
+        (keydown.enter)="todoService.addTodo(input.value)"
+      />
+    </form>
+  </div>
+</section>

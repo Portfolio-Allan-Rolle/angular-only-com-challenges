@@ -1,0 +1,23 @@
+<div class="form-check d-flex align-items-center">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    value=""
+    [attr.checked]="todo().completed ? true : null"
+    [id]="todo().id"
+    (change)="onToggleComplete(todo().id)"
+  />
+  <label
+    [class.text-decoration-line-through]="todo().completed"
+    class="form-check-label ms-2"
+    [for]="todo().id"
+  >
+    {{ todo().body }}</label
+  >
+  <button
+    class="badge text-bg-danger btn btn-outline-danger ms-2"
+    (click)="onDeleteTodo(todo().id)"
+  >
+    X
+  </button>
+</div>
