@@ -7,7 +7,7 @@ Créez un blog simple utilisant les standalone components d'Angular. Implémente
 ## Compétences acquises
 
 - Création de composants
-- Utilisation du routage
+- Utilisation du routage avec paramètres
 - Création d'un service
 
 ## Development server

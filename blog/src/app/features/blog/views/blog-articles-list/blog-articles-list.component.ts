@@ -18,7 +18,7 @@ export default class BlogArticlesListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.excerptsSubscription = this.blogService.loadData().subscribe({
       next: (res) => (this.excerpts = res),
-      error: (err) => console.warn('Error fetching excerpts', err),
+      error: (err) => console.warn(err),
     });
   }
   ngOnDestroy(): void {
