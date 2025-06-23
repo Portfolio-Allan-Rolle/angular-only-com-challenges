@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        @for (excerpt of excerpts; track excerpt.id) {
+          <app-blog-article-excerpt [excerpt]="excerpt" />
+        }
+      </div>
+    </div>
+  </div>
+</div>

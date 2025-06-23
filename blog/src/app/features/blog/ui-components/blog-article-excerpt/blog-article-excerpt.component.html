@@ -1,0 +1,9 @@
+<div>
+  <h2 class="text-muted">
+    <a [routerLink]="['/blog/article', excerpt().id]" class="text-secondary">{{
+      excerpt().title
+    }}</a>
+  </h2>
+  <p class="text-primary my-0">{{ excerpt().created_at }}</p>
+  <p class="text-success my-0">{{ excerpt().category }}</p>
+</div>
