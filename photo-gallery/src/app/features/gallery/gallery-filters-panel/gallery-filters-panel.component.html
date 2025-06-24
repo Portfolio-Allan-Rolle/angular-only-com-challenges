@@ -1,1 +1,14 @@
-<p>gallery-filters-panel works!</p>
+<section class="panel">
+  <h3>Filter images:</h3>
+  <mat-button-toggle-group
+    class="panel_selection"
+    (change)="onSelectFilter($event.value)"
+    name="filterImage"
+    aria-label="Choose a filter"
+    [hideSingleSelectionIndicator]="hideSingleSelectionIndicator()"
+  >
+    @for(filter of allFilters; track filter) {
+    <mat-button-toggle value="{{ filter }}">{{ filter }}</mat-button-toggle>
+    }
+  </mat-button-toggle-group>
+</section>

@@ -1,0 +1,12 @@
+.panel {
+  text-align: center;
+  margin-bottom: 20px;
+  &_selection {
+    @media screen and (max-width: 470px) {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      margin: 0 auto;
+    }
+  }
+}

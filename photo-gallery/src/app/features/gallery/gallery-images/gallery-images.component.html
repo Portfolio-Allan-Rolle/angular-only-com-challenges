@@ -1,1 +1,7 @@
-<p>gallery-images works!</p>
+<mat-grid-list [cols]="breakpoint" (window:resize)="onResize($event)">
+  @for(image of images | galleryFilter:filter() ; track image.url) {
+  <mat-grid-tile>
+    <img [src]="'/images/' + image.url" />
+  </mat-grid-tile>
+  }
+</mat-grid-list>
