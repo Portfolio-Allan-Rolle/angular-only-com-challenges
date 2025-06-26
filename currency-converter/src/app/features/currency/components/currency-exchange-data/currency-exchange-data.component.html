@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      @if (data().length > 0) {
+        @for (item of data(); track $index) {
+          <div class="col-xl-2 col-md-6 col-sm-4">
+            <app-currency-exchange-data-card [item]="item" />
+          </div>
+        }
+      }
+    </div>
+  </div>
+</div>
