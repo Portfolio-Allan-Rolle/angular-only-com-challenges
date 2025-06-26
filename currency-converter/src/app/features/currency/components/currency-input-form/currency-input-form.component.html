@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <form [formGroup]="form" class="mb-4">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="form"
+              placeholder="Enter an amount in euros"
+              formControlName="amount"
+            />
+          </div>
+          <div>
+            @if (
+              formService.isInvalidAndTouchedOrDirty(
+                formService.getFormControl(form, "amount")
+              )
+            ) {
+              @if (
+                formService.getFormControl(form, "amount").errors?.["required"]
+              ) {
+                <p class="text-danger my-0">A value is required</p>
+              }
+              @if (
+                formService.getFormControl(form, "amount").errors?.["pattern"]
+              ) {
+                <p class="text-danger my-0">
+                  Incorrect format. Try 10 or 10.00 or 18.60
+                </p>
+              }
+            }
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
