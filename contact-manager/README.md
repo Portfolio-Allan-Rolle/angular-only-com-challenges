@@ -1,15 +1,16 @@
-# Blog
+# Gestionnaire de contacts
 
-## Gestionnaire de contacts
+## Description
 
 Développez une application de gestion de contacts avec CRUD complet.  
- Utilisez les formulaires réactifs avec validation, stockez les données dans une API simulée avec json-server.
+Utilisez les formulaires réactifs avec validation, stockez les données dans une API simulée avec json-server.
 
 ## Compétences acquises
 
 - Création de composants
 - Utilisation du routage avec paramètres
 - Création d'un service
+- Création de formulaire réactif avec validations
 - Requêtes HTTP simulées avec json-server
 
 ## Development server
