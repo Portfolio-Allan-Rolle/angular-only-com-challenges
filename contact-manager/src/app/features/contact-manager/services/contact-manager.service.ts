@@ -1,5 +1,5 @@
 import { inject, Injectable, signal } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHandler, HttpHeaders } from '@angular/common/http';
 import { IContact } from '../../../api/models';
 import { catchError, throwError } from 'rxjs';
 
@@ -22,6 +22,34 @@ export class ContactManagerService {
       .subscribe({
         next: (res) => this.contacts.set(res),
       });
+  }
+
+  getContact(id: string) {
+    return this.http
+      .get<IContact>(`${this.baseURL}/api/contacts/${id}`)
+      .pipe(
+        catchError((err) =>
+          throwError(
+            () => 'Error fetching contact: ' + err.message + ' with id: ' + id,
+          ),
+        ),
+      );
+  }
+
+  editContact(contact: Partial<IContact>, id: string) {
+    return this.http
+      .patch<IContact>(`${this.baseURL}/api/contacts/${id}`, contact, {
+        headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+      })
+      .subscribe();
+  }
+
+  saveContact(contact: Partial<IContact>) {
+    return this.http
+      .post<IContact>(`${this.baseURL}/api/contacts/`, contact, {
+        headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+      })
+      .subscribe();
   }
 
   deleteContact(id: string) {

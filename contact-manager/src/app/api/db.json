@@ -1,18 +1,32 @@
 {
   "contacts": [
     {
-      "id": "2",
-      "name": "Pascal Larmentier",
-      "email": "pascal-larmentier@hotmail.com",
-      "website": "pascal-larmentier.fr",
-      "phone_number": "0122998877"
+      "name": "ROLLE ALLAN",
+      "email": "allan.rolle@laposte.net",
+      "website": "https://www.angularonly.com/connexion",
+      "phone_number": "0924029731",
+      "id": 1
     },
     {
-      "name": "Allan Rolle",
-      "email": "allan.rolle@hotmail.com",
-      "website": "allan-rolle.fr",
-      "phone_number": "0724567886",
-      "id": "I30Vni-"
+      "name": "Pascal Larmentier",
+      "email": "pascal-larmentier@hotmail.com",
+      "website": "https://en.wikipedia.org/wiki/Blaise_Pascal",
+      "phone_number": "0109823434",
+      "id": 2
+    },
+    {
+      "name": "Julie Mercier",
+      "email": "julie@gmail.com",
+      "website": "https://angular.fr/",
+      "phone_number": "0654357888",
+      "id": 3
+    },
+    {
+      "name": "Nathan Dupont",
+      "email": "nathan.dupont@hotmail.fr",
+      "website": "https://www.npmjs.com/package/ngx-trim-directive",
+      "phone_number": "0109877655",
+      "id": 4
     }
   ]
 }

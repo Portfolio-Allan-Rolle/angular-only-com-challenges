@@ -21,7 +21,16 @@ export const routes: Routes = [
       ).then((m) => m.ContactManagerDetailComponent),
   },
   {
-    path: 'edit',
+    path: 'add',
+    data: { mode: 'add' },
+    loadComponent: () =>
+      import(
+        './routes/contact-manager-form/contact-manager-form.component'
+      ).then((m) => m.ContactManagerFormComponent),
+  },
+  {
+    path: 'edit/:id',
+    data: { mode: 'edit' },
     loadComponent: () =>
       import(
         './routes/contact-manager-form/contact-manager-form.component'

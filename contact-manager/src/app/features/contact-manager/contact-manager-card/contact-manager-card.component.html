@@ -1,1 +1,37 @@
-<p>contact-manager-card works!</p>
+<div class="mb-4">
+  <a
+    [routerLink]="['/home']"
+    class="text-primary me-2 link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+    >< Back</a
+  >
+</div>
+@if (currentContact()) {
+  <div>
+    <ul>
+      <li>Nom: {{ currentContact()?.name }}</li>
+      <li>Email: {{ currentContact()?.email }}</li>
+      <li>Website: {{ currentContact()?.website }}</li>
+      <li>Phone number: {{ currentContact()?.phone_number }}</li>
+    </ul>
+    <span>Actions:</span>
+    <div>
+      <ul>
+        <li class="mb-2">
+          <a
+            [routerLink]="['/edit', currentContactId()]"
+            class="text-secondary me-2 link-success link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+            >Edit contact</a
+          >
+        </li>
+        <li>
+          <button
+            (click)="onDeleteContact(currentContactId())"
+            class="btn btn-outline-danger me-2 px-2 py-0"
+          >
+            Delete contact
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+}

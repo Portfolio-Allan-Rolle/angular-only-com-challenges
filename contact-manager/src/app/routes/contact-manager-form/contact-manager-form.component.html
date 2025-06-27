@@ -1,1 +1,106 @@
-<p>contact-manager-form works!</p>
+<form class="container" [formGroup]="form">
+  <a [routerLink]="['/home']">< Back</a>
+  <div class="row">
+    <div class="col">
+      <div class="form-group row mb-3">
+        <label for="name" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+          <input
+            formControlName="name"
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Name"
+            autocomplete="name"
+            trim="blur"
+          />
+          @if (isInvalidAndTouchedOrDirty(getFormControl("name"))) {
+            <div>
+              @if (getFormControl("name").errors?.["required"]) {
+                <p class="text-danger my-0">A name is required.</p>
+              }
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="form-group row mb-3">
+        <label for="email" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input
+            autocomplete="email"
+            formControlName="email"
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Email"
+            trim="blur"
+          />
+          @if (isInvalidAndTouchedOrDirty(getFormControl("email"))) {
+            <div>
+              @if (getFormControl("email").errors?.["required"]) {
+                <p class="text-danger my-0">An email is required</p>
+              }
+              @if (getFormControl("email").errors?.["email"]) {
+                <p class="text-danger my-0">The format is incorrect.</p>
+              }
+            </div>
+          }
+        </div>
+      </div>
+      <div class="form-group row mb-3">
+        <label for="website" class="col-sm-2 col-form-label">Website</label>
+        <div class="col-sm-10">
+          <input
+            autocomplete="url"
+            formControlName="website"
+            type="website"
+            class="form-control"
+            id="website"
+            placeholder="website"
+            trim="blur"
+          />
+          @if (isInvalidAndTouchedOrDirty(getFormControl("website"))) {
+            <div>
+              @if (getFormControl("website").errors?.["required"]) {
+                <p class="text-danger my-0">A website is required</p>
+              }
+              @if (getFormControl("website").errors?.["pattern"]) {
+                <p class="text-danger my-0">
+                  The format is incorrect. (ex: http://www.foufos.gr)
+                </p>
+              }
+            </div>
+          }
+        </div>
+      </div>
+      <div class="form-group row mb-3">
+        <label for="phone" class="col-sm-2 col-form-label">Phone number</label>
+        <div class="col-sm-10">
+          <input
+            autocomplete="tel-local"
+            formControlName="phone_number"
+            type="phone"
+            class="form-control"
+            id="phone"
+            placeholder="phone"
+            trim="blur"
+          />
+          @if (isInvalidAndTouchedOrDirty(getFormControl("phone_number"))) {
+            <div>
+              @if (getFormControl("phone_number").errors?.["required"]) {
+                <p class="text-danger my-0">A phone number is required</p>
+              }
+              @if (getFormControl("phone_number").errors?.["pattern"]) {
+                <p class="text-danger my-0">
+                  The format is incorrect. (ex: 01 02 03 04 05)
+                </p>
+              }
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="onFormSubmit()" type="submit">Submit</button>
+</form>
