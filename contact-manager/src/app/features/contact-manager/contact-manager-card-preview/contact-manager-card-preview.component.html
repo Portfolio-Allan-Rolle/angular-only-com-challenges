@@ -1,0 +1,17 @@
+<div class="p-2">
+  <button
+    (click)="contactService.deleteContact(contact().id)"
+    title="delete"
+    style="width: 25px; border-radius: 50%"
+    type="button"
+    class="btn btn-outline-danger me-2 p-0"
+  >
+    X
+  </button>
+  <a
+    title="View contact"
+    [routerLink]="['/detail', contact().id]"
+    class="text-secondary me-2 link-success link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+    >{{ contact().name }}</a
+  >
+</div>
